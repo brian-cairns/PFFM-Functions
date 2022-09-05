@@ -1,8 +1,5 @@
 const hrsWorked = document.getElementById('hrsWorked')
 const hrsUsed = document.getElementById('hrsUsed')
-let staff = ''
-let newClient = ''
-
 
 //add Event Listeners for the two functions
 hrsWorked.addEventListener('click', (e) => { 
@@ -16,11 +13,15 @@ hrsWorked.addEventListener('click', (e) => {
 
 hrsUsed.addEventListener('click', (e) => { 
         if (sessionStorage.getItem('staff') != '') {
-            clearInterval()
             sessionStorage.setItem('staff', sessionStorage.getItem('staff'))
             retrieveHrsUsed(sessionStorage.getItem('staff'))
             console.log(sessionStorage.getItem('staff'))
         }
+})
+
+close.addEventListener('click', (e) => {
+    document.getElementById('showHours').style.display = 'none';
+    resetInputs()
 })
 
 //Retrieve Hours
@@ -66,3 +67,4 @@ function showHours(data) {
     document.getElementById('end').innerHTML = data.end;
     document.getElementById('showHours').style.display = 'block'
 }
+
