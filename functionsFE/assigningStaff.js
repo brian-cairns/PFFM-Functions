@@ -45,7 +45,7 @@ async function acceptNewClient(clientName) {
     let uri = mainUrl + '/updateClient/accept?name=' + clientName + '&date=' + today
     const metaData = {
         method: "GET",
-        header: {
+        headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Access-Control-Allow-Origin": "*"
         }
