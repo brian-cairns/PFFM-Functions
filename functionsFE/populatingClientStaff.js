@@ -5,7 +5,6 @@
 const mainUrl = 'https://pffm.azurewebsites.net'
 sessionStorage.clear()
 
-sessionStorage.clear()
 //The purpose of this module is to enable selecting members from two lists and
 //creating a link between them - e.g provider/client
 
