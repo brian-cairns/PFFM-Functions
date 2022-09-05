@@ -52,7 +52,7 @@ async function acceptNewClient(clientName) {
     }
     console.log('sending =========> ', uri, '&', metaData)
     fetch(uri, metaData)
-        .then(() => resetInputs())
+        .then(() => resetPage())
         .catch(console.error)
 } 
 
@@ -64,7 +64,7 @@ async function assignClientStaff(obj) {
     assignedClient = await assignClient(staffName, clientName)
     assignedStaff = await assignStaff(clientName, staffName)
     if (assignedClient == true && assignedStaff == true) {
-       resetInputs()
+       resetPage()
     } 
 }
 
@@ -112,10 +112,3 @@ async function assignStaff(clientName, staffName) {
             return false
         })
 }
-
-function resetInputs() {
-		sessionStorage.clear()
-    getProviders()
-		getClients()
-    interval = 'off'
- }

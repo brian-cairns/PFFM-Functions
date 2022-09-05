@@ -53,7 +53,7 @@ function populateProviders(data) {
     if (count == 1) {
         sessionStorage.setItem('staff', staff.name)
         card.style.backgroundColor = 'red'
-        sessionStorage.setItem('Staffblocked', true)
+        sessionStorage.setItem('StaffBlocked', true)
     }
     if (count == 0) {
         sessionStorage.setItem('staff', '')
